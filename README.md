@@ -1,2 +1,2 @@
 # CppAssert
-Better assert() function for C++ only
+Better assert() function for C++
