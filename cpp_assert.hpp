@@ -1,5 +1,5 @@
 #include <iostream> // std::cerr
-#include <type_traits> // std::enable_if_t<>, std::is_invocable_r_v<>
+#include <type_traits> // std::enable_if_t<>, std::is_invocable_r_v<>, std::is_same_v<>
 #include <exception> // std::terminate()
 
 #ifndef CPP_ASSERT_HPP
