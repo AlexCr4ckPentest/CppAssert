@@ -41,11 +41,11 @@ constexpr void __assert_base(Expression expr, const char* filename, int line, Ha
 
 
 #define ASSERT_DEFAULT(expression)  \
-    alex::assert::__assert_base(static_cast<bool>(expression), __FILE_NAME__, __LINE__,    \
+    alex::assert::__assert_base(static_cast<bool>(expression), __FILE__, __LINE__,    \
                                 std::bind(alex::assert::__default_assertion_handler, std::placeholders::_1, std::placeholders::_2, __PRETTY_FUNCTION__, #expression, std::ref(std::cerr)))
 
 #define ASSERT_CUSTOM(expression, handler, stream)  \
-    alex::assert::__assert_base(static_cast<bool>(expression), __FILE_NAME__, __LINE__,    \
+    alex::assert::__assert_base(static_cast<bool>(expression), __FILE__, __LINE__,    \
                                 std::bind(handler, std::placeholders::_1, std::placeholders::_2, __PRETTY_FUNCTION__, #expression, std::ref(stream)))
 
 #endif // CPP_ASSERT_HPP
