@@ -9,12 +9,12 @@ Better assert() function for C++ (instead assert() from `<cassert>`)
 ```
 
 ### Default handler and output stream
-__Syntax:__
+Syntax:
 ```C++
 ASSERT_DEFAULT(<bool expression>);
 ```
 
-__Example:__
+Example:
 ```C++
 ASSERT_DEFAULT(1 == 1); // Pass
 ASSERT_DEFAULT(1 > 2); // Assertion failed! Call default handler and write to std::cerr
@@ -42,12 +42,12 @@ _Where:_
 _Output stream is a stream where handler will write some information about the failed assertion_ \
 _Output stream should be derived from the `std::ostream`_
 
-__Syntax:__
+Syntax:
 ```C++
 ASSERT_CUSTOM(<bool expression>, <handler>, <output stream>);
 ```
 
-__Example:__
+Example:
 ```C++
 std::ofstream out_file_stream{...};
 
