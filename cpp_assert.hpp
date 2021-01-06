@@ -22,13 +22,13 @@ void __default_assertion_handler(const char* filename, int line, const char* fun
 
 
 
-template<Typename Expression, typename Handler,
+template<typename Expression, typename Handler,
          typename = std::enable_if_t<
              std::is_convertible_v<Expression, bool> &&
              std::is_invocable_r_v<void, Handler, const char*, int, const char*, const char*, std::ostream&>
              >
 >
-constexpr void __assert_base(const char* filename, int line, Handler&& handler) noexcept
+constexpr void __assert_base(Expression expr, const char* filename, int line, Handler&& handler) noexcept
 {
     if (!expr)
     {
