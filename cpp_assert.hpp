@@ -1,7 +1,7 @@
 #include <iostream> // std::cerr
-#include <type_traits> // std::enable_if_t<>, std::is_invocable_r_v<>, std::is_same_v<>
+#include <type_traits> // std::enable_if_t<>, std::is_convertible_v<>, std::is_invocable_r_v<>
 #include <exception> // std::terminate()
-#include <functional>
+#include <functional> // std::bind()
 
 #ifndef CPP_ASSERT_HPP
 #define CPP_ASSERT_HPP
